@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Nature Image Gallery</h1>
+
+       <div class="img-container">
+        <div class="img">
+            <img src="imggg/1.jpg">
+        </div>
+
+        <div class="img">
+            <img src="imggg/2.jpg">
+        </div>
+
+        <div class="img">
+            <img src="imggg/3.jpg">
+        </div>
+
+        <div class="img">
+            <img src="imggg/4.jpg">
+        </div>
+
+        <div class="img">
+            <img src="imggg/5.jpg">
+        </div>
+
+        <div class="img">
+            <img src="imggg/6.jpg">
+        </div>
+       </div>
+
+       <div class="pop-up">
+        <span>&times;</span>
+        <img src="imggg/4.jpg" alt="">
+       </div>
+
+    </div>
+    
+    <script>
+
+        document.querySelectorAll('.img-container img').forEach(img =>{
+            img.onclick = () => {
+                document.querySelector('.pop-up').style.display = 'block';
+                document.querySelector('.pop-up img').src = img.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.pop-up span').onclick = () => {
+            document.querySelector('.pop-up').style.display = 'none'; 
+        }
+
+    </script>
+
+</body>
+</html>
